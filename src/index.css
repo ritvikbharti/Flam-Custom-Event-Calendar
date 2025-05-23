@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 bg-gray-50;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium leading-tight;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md
+           transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-purple-500 text-white hover:bg-purple-600 focus:ring-purple-500;
+  }
+  
+  .btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600 focus:ring-red-500;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100;
+  }
+
+  .calendar-day {
+    @apply h-24 sm:h-32 p-1 border border-gray-100 overflow-hidden transition-colors duration-100;
+  }
+
+  .calendar-day-current-month {
+    @apply bg-white hover:bg-gray-50;
+  }
+
+  .calendar-day-other-month {
+    @apply bg-gray-50 text-gray-400 hover:bg-gray-100;
+  }
+
+  .calendar-day-today {
+    @apply bg-blue-50;
+  }
+
+  .event-chip {
+    @apply text-xs px-2 py-1 rounded-md mb-1 truncate cursor-pointer transition-all 
+           duration-150 hover:shadow-md;
+  }
+}
